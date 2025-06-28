@@ -1,0 +1,192 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Notre Processus | Saveurs d'Haïti" description="Découvrez comment nous vous apportons l'authenticité de la cuisine haïtienne directement chez vous.">
+  <main>
+    <!-- En-tête de page -->
+    <section class="relative py-24 bg-primary-900 text-white">
+      <div class="absolute inset-0 z-0 opacity-30">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <img 
+          src="/images/gallery-1.jpg" 
+          alt="Cuisine haïtienne" 
+          class="w-full h-full object-cover"
+        />
+      </div>
+      
+      <div class="container-custom relative z-10 text-center">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6">Notre Processus</h1>
+        <div class="w-24 h-0.5 bg-gold-400 mx-auto mb-8"></div>
+        <p class="text-lg max-w-3xl mx-auto">
+          Découvrez comment nous vous apportons l'authenticité de la cuisine haïtienne directement chez vous.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Processus étape par étape -->
+    <section class="section bg-white">
+      <div class="container-custom">
+        <h2 class="section-title">De l'Haïti à Votre Table</h2>
+        <p class="section-subtitle">Un processus soigneusement élaboré pour vous garantir une expérience culinaire authentique</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-16">
+          <!-- Étape 1 -->
+          <div class="luxury-card text-center p-8">
+            <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-primary-700">1</span>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Sélection des Ingrédients</h3>
+            <p class="text-gray-600">
+              Nous sélectionnons et importons directement d'Haïti les meilleurs ingrédients authentiques pour garantir des saveurs véritables.
+            </p>
+          </div>
+          
+          <!-- Étape 2 -->
+          <div class="luxury-card text-center p-8">
+            <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-primary-700">2</span>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Préparation Traditionnelle</h3>
+            <p class="text-gray-600">
+              Nos chefs expérimentés préparent chaque plat selon les recettes traditionnelles haïtiennes, en respectant les techniques ancestrales.
+            </p>
+          </div>
+          
+          <!-- Étape 3 -->
+          <div class="luxury-card text-center p-8">
+            <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-primary-700">3</span>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Commande Simplifiée</h3>
+            <p class="text-gray-600">
+              Parcourez notre menu en ligne, sélectionnez vos plats préférés et passez commande en quelques clics pour une expérience sans tracas.
+            </p>
+          </div>
+          
+          <!-- Étape 4 -->
+          <div class="luxury-card text-center p-8">
+            <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-primary-700">4</span>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Livraison Soignée</h3>
+            <p class="text-gray-600">
+              Nous livrons vos plats dans un emballage élégant et écologique, conçu pour préserver toutes les saveurs jusqu'à votre table.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="section bg-primary-50">
+      <div class="container-custom">
+        <h2 class="section-title">Questions Fréquentes</h2>
+        <p class="section-subtitle">Tout ce que vous devez savoir sur notre service de livraison de plats haïtiens</p>
+        
+        <div class="mt-12 max-w-3xl mx-auto">
+          <!-- Question 1 -->
+          <div class="luxury-card p-6 mb-6">
+            <h3 class="text-xl font-bold mb-3">Quelle est la zone de livraison ?</h3>
+            <p class="text-gray-600">
+              Nous livrons actuellement dans un rayon de 30 km autour de notre cuisine centrale. Vérifiez votre éligibilité en saisissant votre code postal sur notre page de commande.
+            </p>
+          </div>
+          
+          <!-- Question 2 -->
+          <div class="luxury-card p-6 mb-6">
+            <h3 class="text-xl font-bold mb-3">Comment sont conservés les plats pendant la livraison ?</h3>
+            <p class="text-gray-600">
+              Nos plats sont conditionnés dans des emballages isothermes de haute qualité qui maintiennent la température idéale pendant le transport, garantissant fraîcheur et saveur.
+            </p>
+          </div>
+          
+          <!-- Question 3 -->
+          <div class="luxury-card p-6 mb-6">
+            <h3 class="text-xl font-bold mb-3">Puis-je programmer une livraison à l'avance ?</h3>
+            <p class="text-gray-600">
+              Absolument ! Vous pouvez planifier votre livraison jusqu'à 7 jours à l'avance, idéal pour organiser un dîner spécial ou un événement.
+            </p>
+          </div>
+          
+          <!-- Question 4 -->
+          <div class="luxury-card p-6">
+            <h3 class="text-xl font-bold mb-3">Les plats nécessitent-ils une préparation supplémentaire ?</h3>
+            <p class="text-gray-600">
+              La plupart de nos plats sont prêts à être dégustés. Certains nécessitent un simple réchauffage pour lequel nous fournissons des instructions détaillées pour préserver toutes les saveurs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="section bg-primary-900 text-white">
+      <div class="container-custom text-center">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Prêt à Découvrir les Saveurs d'Haïti ?</h2>
+        <p class="text-lg max-w-2xl mx-auto mb-10">
+          Commandez dès maintenant et laissez-vous transporter par les saveurs authentiques de la cuisine haïtienne, livrées directement chez vous.
+        </p>
+        <a href="/menu" class="btn-secondary inline-block">
+          Commander maintenant
+        </a>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .luxury-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .luxury-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: var(--font-serif);
+  }
+  
+  .section-subtitle {
+    font-size: 1.125rem;
+    text-align: center;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #4B5563;
+  }
+  
+  .section {
+    padding: 5rem 1.5rem;
+  }
+  
+  .container-custom {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .btn-secondary {
+    display: inline-block;
+    background-color: #C8A97E;
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #B69A6B;
+  }
+</style>

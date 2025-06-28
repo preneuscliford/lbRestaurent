@@ -1,0 +1,65 @@
+---
+export interface MenuItem {
+  name: string;
+  description: string;
+  price: string;
+  vegetarian?: boolean;
+  popular?: boolean;
+  alcoholic?: boolean;
+}
+
+interface Props {
+  id: string;
+  title: string;
+  description: string;
+  items: MenuItem[];
+  isdrink?: boolean;
+}
+
+const { id, title, description, items, isdrink = false } = Astro.props;
+---
+
+<section id={id} class="mb-16">
+  <h2 class="text-3xl font-serif font-bold mb-2">{title}</h2>
+  <p class="text-gray-600 mb-8">{description}</p>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {items.map((item) => (
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src={`/images/${item.name.toLowerCase().replace(/\s+/g, '-').replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '')}.jpg`} 
+            alt={item.name}
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            onerror="this.src='/images/placeholder-dish.jpg'; this.onerror=null;"
+          />
+          {item.popular && (
+            <span class="absolute top-2 right-2 bg-secondary-500 text-white text-xs px-3 py-1 rounded-full font-medium shadow-md">
+              Populaire
+            </span>
+          )}
+          {item.vegetarian && !isdrink && (
+            <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-medium shadow-md">
+              <i class="fas fa-leaf mr-1"></i> Végétarien
+            </span>
+          )}
+          {isdrink && item.alcoholic && (
+            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-3 py-1 rounded-full font-medium shadow-md">
+              <i class="fas fa-wine-glass-alt mr-1"></i> Alcool
+            </span>
+          )}
+        </div>
+        <div class="p-4 flex flex-col flex-grow">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="font-medium text-lg text-primary-800">{item.name}</h3>
+            <span class="font-bold text-gold-600 text-lg">{item.price} €</span>
+          </div>
+          <p class="text-gray-600 text-sm flex-grow">{item.description}</p>
+          <button class="mt-4 bg-primary-700 hover:bg-primary-800 text-white py-2 px-4 rounded-md transition-colors duration-300 flex items-center justify-center">
+            <i class="fas fa-shopping-cart mr-2"></i> Ajouter au panier
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

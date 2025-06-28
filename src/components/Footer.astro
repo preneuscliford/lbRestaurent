@@ -1,0 +1,112 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-primary-900 text-white pt-20 pb-10">
+  <!-- Motif décoratif -->
+  <div class="absolute left-0 right-0 h-4 bg-gold-500 opacity-90"></div>
+  
+  <div class="container-custom">
+    <!-- Logo et informations principales -->
+    <div class="flex flex-col items-center mb-16 text-center">
+      <div class="flex items-center space-x-3 mb-6">
+        <div class="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-orange-400 to-yellow-500 rounded-lg shadow-lg">
+          <img src="/images/logo-lb-restaurant.jpg" alt="L.B Restaurant Logo" class="w-12 h-12 rounded object-cover" />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-3xl font-bold tracking-wide">L.B Restaurant</span>
+          <span class="text-xs uppercase tracking-widest text-orange-400">Cuisine Haïtienne Authentique</span>
+        </div>
+      </div>
+      <p class="max-w-xl text-gray-300 mb-8">
+        Découvrez l'authenticité de la cuisine haïtienne au cœur de Cayenne. Riz blanc, haricots noirs, poulet ou porc frit - des saveurs traditionnelles pour un bon repas en famille.
+      </p>
+      <div class="flex space-x-4">
+        <a href="#" class="w-10 h-10 rounded-full border border-gold-400 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-primary-900 transition-all duration-300">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full border border-gold-400 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-primary-900 transition-all duration-300">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full border border-gold-400 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-primary-900 transition-all duration-300">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 border-t border-primary-800 pt-16">
+      <!-- Informations de contact -->
+      <div>
+        <h3 class="text-xl font-serif font-bold mb-6 relative inline-block">
+          Contact
+          <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-gold-400"></span>
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-400"></i>
+            <span class="text-gray-300">15 AV de L'AMIRAL JEAN DESTREE<br>97300 CAYENNE, Guyane Française</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-phone-alt mt-1 mr-3 text-orange-400"></i>
+            <span class="text-gray-300">0694 41 06 70</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-envelope mt-1 mr-3 text-orange-400"></i>
+            <span class="text-gray-300">contact@lb-restaurant.gf</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Heures d'ouverture -->
+      <div>
+        <h3 class="text-xl font-serif font-bold mb-6 relative inline-block">
+          Heures d'ouverture
+          <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-gold-400"></span>
+        </h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <i class="fas fa-clock mt-1 mr-3 text-gold-400"></i>
+            <span class="text-gray-300">Commandes en ligne: 24h/24<br>Livraisons: Lun-Sam: 10h-20h</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-xl font-serif font-bold mb-6 relative inline-block">
+          Restez informés
+          <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-gold-400"></span>
+        </h3>
+        <p class="mb-6 text-gray-300">Abonnez-vous à notre newsletter pour recevoir nos dernières nouvelles et offres exclusives.</p>
+        <form class="flex flex-col sm:flex-row">
+          <input 
+            type="email" 
+            placeholder="Votre email" 
+            class="px-4 py-3 bg-primary-800 border border-primary-700 text-white placeholder-gray-400 mb-2 sm:mb-0 focus:outline-none focus:ring-1 focus:ring-gold-400 w-full"
+            required
+          />
+          <button 
+            type="submit" 
+            class="bg-gold-500 text-primary-900 px-6 py-3 hover:bg-gold-600 transition-colors uppercase tracking-wider text-sm font-medium"
+          >
+            S'abonner
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="border-t border-primary-800 pt-8 text-center">
+      <p class="text-gray-400 text-sm">
+        <span class="text-gold-400">&copy; {currentYear}</span> Saveurs d'Haïti. Tous droits réservés.
+      </p>
+      <div class="mt-4 text-xs text-gray-500 flex justify-center space-x-4">
+        <a href="#" class="hover:text-gold-400 transition-colors">Mentions légales</a>
+        <span>|</span>
+        <a href="#" class="hover:text-gold-400 transition-colors">Politique de confidentialité</a>
+        <span>|</span>
+        <a href="#" class="hover:text-gold-400 transition-colors">Plan du site</a>
+      </div>
+    </div>
+  </div>
+</footer>

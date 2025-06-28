@@ -1,0 +1,302 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import MenuCategory from '../components/MenuCategory.astro';
+
+// Données des menus
+const starters = [
+  {
+    name: "Akra de Malanga",
+    description: "Beignets croustillants de taro épicés, servis avec sauce pikliz",
+    price: "8.95",
+    vegetarian: true,
+    popular: true
+  },
+  {
+    name: "Marinades",
+    description: "Beignets de farine aux herbes et épices, accompagnés de sauce créole",
+    price: "7.95",
+    vegetarian: true,
+    popular: false
+  },
+  {
+    name: "Salade de Betteraves",
+    description: "Betteraves, pommes de terre, œufs durs et mayonnaise maison",
+    price: "9.95",
+    vegetarian: true,
+    popular: false
+  },
+  {
+    name: "Bouillon de Bœuf",
+    description: "Soupe traditionnelle aux légumes, viande de bœuf et épices",
+    price: "10.95",
+    vegetarian: false,
+    popular: true
+  }
+];
+
+const mainDishes = [
+  {
+    name: "Griot & Bananes Pesées",
+    description: "Porc mariné et frit, servi avec bananes plantains et pikliz",
+    price: "18.95",
+    vegetarian: false,
+    popular: true
+  },
+  {
+    name: "Poisson à l'Haïtienne",
+    description: "Poisson frais cuisiné dans une sauce créole épicée aux légumes",
+    price: "22.95",
+    vegetarian: false,
+    popular: true
+  },
+  {
+    name: "Tassot de Cabri",
+    description: "Morceaux de cabri frits, marinés dans des agrumes et épices",
+    price: "21.95",
+    vegetarian: false,
+    popular: false
+  },
+  {
+    name: "Légumes Haïtiens",
+    description: "Assortiment de légumes à la haïtienne avec épices et herbes fraîches",
+    price: "14.95",
+    vegetarian: true,
+    popular: false
+  },
+  {
+    name: "Lambi en Sauce",
+    description: "Conque tendre cuisinée dans une sauce tomate créole épicée",
+    price: "24.95",
+    vegetarian: false,
+    popular: true
+  },
+  {
+    name: "Poulet Créole",
+    description: "Poulet mijoté dans une sauce créole aux poivrons et tomates",
+    price: "17.95",
+    vegetarian: false,
+    popular: false
+  }
+];
+
+const sideDishes = [
+  {
+    name: "Riz Djon-Djon",
+    description: "Riz noir aux champignons djon-djon",
+    price: "6.95",
+    vegetarian: true,
+    popular: true
+  },
+  {
+    name: "Riz Collé aux Haricots",
+    description: "Riz et haricots rouges cuits ensemble",
+    price: "5.95",
+    vegetarian: true,
+    popular: false
+  },
+  {
+    name: "Bananes Pesées",
+    description: "Bananes plantains frites et écrasées",
+    price: "4.95",
+    vegetarian: true,
+    popular: true
+  },
+  {
+    name: "Pikliz",
+    description: "Condiment épicé de chou et carottes marinés",
+    price: "3.95",
+    vegetarian: true,
+    popular: true
+  }
+];
+
+const desserts = [
+  {
+    name: "Pain Patate",
+    description: "Gâteau de patate douce aux épices et raisins secs",
+    price: "8.95",
+    vegetarian: true,
+    popular: true
+  },
+  {
+    name: "Blanc Manger",
+    description: "Dessert créole à base de lait de coco et vanille",
+    price: "7.95",
+    vegetarian: true,
+    popular: false
+  },
+  {
+    name: "Tablette Noix",
+    description: "Tablette de noix caramélisées aux épices",
+    price: "6.95",
+    vegetarian: true,
+    popular: true
+  },
+  {
+    name: "Sorbet de Fruits Tropicaux",
+    description: "Assortiment de sorbets maison aux fruits exotiques",
+    price: "8.95",
+    vegetarian: true,
+    popular: false
+  }
+];
+
+const drinks = [
+  {
+    name: "Jus de Grenadine",
+    description: "Jus frais de grenadine",
+    price: "5.95",
+    alcoholic: false,
+    popular: true
+  },
+  {
+    name: "Rhum Barbancourt",
+    description: "Rhum haïtien premium, 5 étoiles (50ml)",
+    price: "9.95",
+    alcoholic: true,
+    popular: true
+  },
+  {
+    name: "Crémas",
+    description: "Boisson crémeuse à base de rhum, lait de coco et épices",
+    price: "7.95",
+    alcoholic: true,
+    popular: true
+  },
+  {
+    name: "Jus de Corossol",
+    description: "Jus frais de corossol sucré",
+    price: "5.95",
+    alcoholic: false,
+    popular: false
+  },
+  {
+    name: "Cocktail Haïtien",
+    description: "Mélange de rhum, jus de fruits tropicaux et épices",
+    price: "10.95",
+    alcoholic: true,
+    popular: false
+  }
+];
+---
+
+<MainLayout 
+  title="Notre Menu | Restaurant Haïtien" 
+  description="Découvrez notre menu complet de spécialités haïtiennes authentiques, préparées avec passion et ingrédients de qualité."
+>
+  <!-- En-tête du menu -->
+  <section class="relative py-24 bg-primary-900 text-white">
+    <div class="absolute inset-0 z-0 opacity-30">
+      <div class="absolute inset-0 bg-black/60 z-10"></div>
+      <img 
+        src="/images/gallery-1.jpg" 
+        alt="Cuisine haïtienne" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    
+    <div class="container-custom relative z-10 text-center">
+      <div class="mb-4">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-300 font-medium">Saveurs Authentiques</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6">Notre Menu</h1>
+      <div class="w-24 h-0.5 bg-gold-400 mx-auto mb-8"></div>
+      <p class="text-lg max-w-2xl mx-auto">
+        Découvrez notre sélection de plats haïtiens authentiques, importés et préparés avec passion, livrés directement chez vous.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Filtres du menu -->
+  <section class="py-12 bg-white">
+    <div class="container-custom">
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="#starters" class="px-6 py-3 border-b-2 border-transparent hover:border-gold-400 text-primary-800 font-medium transition-all duration-300 flex items-center">
+          <i class="fas fa-utensils mr-2 text-gold-500"></i>
+          Entrées
+        </a>
+        <a href="#main-dishes" class="px-6 py-3 border-b-2 border-transparent hover:border-gold-400 text-primary-800 font-medium transition-all duration-300 flex items-center">
+          <i class="fas fa-drumstick-bite mr-2 text-gold-500"></i>
+          Plats Principaux
+        </a>
+        <a href="#side-dishes" class="px-6 py-3 border-b-2 border-transparent hover:border-gold-400 text-primary-800 font-medium transition-all duration-300 flex items-center">
+          <i class="fas fa-mortar-pestle mr-2 text-gold-500"></i>
+          Accompagnements
+        </a>
+        <a href="#desserts" class="px-6 py-3 border-b-2 border-transparent hover:border-gold-400 text-primary-800 font-medium transition-all duration-300 flex items-center">
+          <i class="fas fa-ice-cream mr-2 text-gold-500"></i>
+          Desserts
+        </a>
+        <a href="#drinks" class="px-6 py-3 border-b-2 border-transparent hover:border-gold-400 text-primary-800 font-medium transition-all duration-300 flex items-center">
+          <i class="fas fa-glass-cheers mr-2 text-gold-500"></i>
+          Boissons
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Catégories du menu -->
+  <div class="container-custom py-12">
+    <MenuCategory 
+      id="starters" 
+      title="Entrées" 
+      description="Pour bien commencer votre expérience culinaire haïtienne" 
+      items={starters} 
+    />
+    
+    <MenuCategory 
+      id="main-dishes" 
+      title="Plats Principaux" 
+      description="Des spécialités authentiques pleines de saveurs" 
+      items={mainDishes} 
+    />
+    
+    <MenuCategory 
+      id="side-dishes" 
+      title="Accompagnements" 
+      description="Parfaits pour compléter votre repas" 
+      items={sideDishes} 
+    />
+    
+    <MenuCategory 
+      id="desserts" 
+      title="Desserts" 
+      description="Pour terminer votre repas en douceur" 
+      items={desserts} 
+    />
+    
+    <MenuCategory 
+      id="drinks" 
+      title="Boissons" 
+      description="Pour accompagner parfaitement votre repas" 
+      items={drinks} 
+      isdrink={true}
+    />
+  </div>
+  
+  <!-- Note allergènes -->
+  <section class="bg-gray-50 py-8">
+    <div class="container-custom">
+      <div class="bg-white p-6 rounded-lg shadow-sm border">
+        <h3 class="font-medium text-lg mb-2">Informations sur les allergènes</h3>
+        <p class="text-gray-700">
+          Si vous avez des allergies ou des restrictions alimentaires, n'hésitez pas à en informer notre équipe. 
+          Nous ferons de notre mieux pour adapter nos plats à vos besoins.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Réservation -->
+  <section class="py-16 bg-primary-700 text-white text-center">
+    <div class="container-custom">
+      <h2 class="text-3xl font-serif font-bold mb-4">Envie de découvrir ces délices ?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Réservez votre table dès aujourd'hui pour vivre une expérience culinaire haïtienne inoubliable.
+      </p>
+      <a href="/contact#reservation" class="btn-secondary">
+        Réserver une table <i class="fas fa-calendar-alt ml-2"></i>
+      </a>
+    </div>
+  </section>
+</MainLayout>

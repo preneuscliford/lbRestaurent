@@ -1,0 +1,52 @@
+---
+---
+
+<header class="bg-white shadow-luxury fixed w-full top-0 z-50 border-b border-gold-200">
+  <div class="container-custom py-3">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-3 group">
+        <div class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-orange-400 to-yellow-500 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+          <img src="/images/logo-lb-restaurant.jpg" alt="L.B Restaurant Logo" class="w-10 h-10 rounded object-cover" />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-2xl font-bold text-primary-800 tracking-wide">L.B Restaurant</span>
+          <span class="text-xs uppercase tracking-widest text-orange-600">Cuisine Haïtienne Authentique</span>
+        </div>
+      </a>
+      
+      <!-- Navigation desktop -->
+      <nav class="hidden md:flex space-x-10">
+        <a href="/" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider py-2 border-b-2 border-transparent hover:border-gold-400">Accueil</a>
+        <a href="/menu" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider py-2 border-b-2 border-transparent hover:border-gold-400">Menu</a>
+        <a href="/process" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider py-2 border-b-2 border-transparent hover:border-gold-400">Notre Processus</a>
+        <a href="/about" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider py-2 border-b-2 border-transparent hover:border-gold-400">À propos</a>
+        <a href="/contact" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider py-2 border-b-2 border-transparent hover:border-gold-400">Contact</a>
+      </nav>
+      
+      <!-- Bouton commande -->
+      <a href="/menu" class="hidden md:inline-block btn-secondary">
+        Commander maintenant
+      </a>
+      
+      <!-- Menu mobile -->
+      <button id="mobile-menu-button" class="md:hidden text-primary-800 hover:text-gold-600 transition-colors">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    
+    <!-- Menu mobile déroulant -->
+    <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gold-100 pt-4">
+      <nav class="flex flex-col space-y-4">
+        <a href="/" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider">Accueil</a>
+        <a href="/menu" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider">Menu</a>
+        <a href="/process" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider">Notre Processus</a>
+        <a href="/about" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider">À propos</a>
+        <a href="/contact" class="font-medium text-gray-800 hover:text-gold-600 transition-colors uppercase text-sm tracking-wider">Contact</a>
+        <a href="/menu" class="btn-secondary text-center mt-2">Commander maintenant</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- Espacement pour compenser le header fixe -->
+<div class="pt-24"></div>

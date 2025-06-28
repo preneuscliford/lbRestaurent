@@ -1,0 +1,67 @@
+---
+---
+
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <!-- Image d'arrière-plan avec overlay -->
+  <img 
+    src="/images/plat-signature-lb.jpg" 
+    alt="Plat haïtien traditionnel" 
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  />
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-primary-900/80 z-10"></div>
+  
+  <!-- Éléments décoratifs -->
+  <div class="absolute top-0 left-0 w-full h-full z-10 opacity-20">
+    <div class="absolute top-10 left-10 w-40 h-40 border border-gold-400 rotate-45"></div>
+    <div class="absolute bottom-10 right-10 w-40 h-40 border border-gold-400 rotate-45"></div>
+  </div>
+  
+  <!-- Contenu du hero -->
+  <div class="container-custom relative z-20 text-center text-white">
+    <div class="reveal mb-2">
+      <span class="text-xs uppercase tracking-[0.3em] text-orange-300 font-medium">Restaurant Haïtien Authentique à Cayenne</span>
+    </div>
+    
+    <h1 class="font-serif font-bold mb-6 fade-in">
+      <span class="block text-orange-400 mb-2">L.B Restaurant</span>
+      <span class="block text-white">Riz blanc, haricots noirs <br class="hidden md:block"/> à bientôt pour un bon repas</span>
+    </h1>
+    
+    <div class="w-24 h-0.5 bg-orange-400 mx-auto mb-8"></div>
+    
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 fade-in text-gray-100">
+      Découvrez l'authenticité de la cuisine haïtienne au cœur de Cayenne. Poulet ou porc frit accompagné de riz blanc et haricots noirs pour un repas traditionnel et savoureux.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 fade-in">
+      <a href="/menu" class="btn-secondary">
+        Commander maintenant
+      </a>
+      <a href="/process" class="btn-outline border-white text-white hover:bg-white/10">
+        Notre processus
+      </a>
+    </div>
+  </div>
+  
+  <!-- Défilement vers le bas -->
+  <a 
+    href="#featured-dishes" 
+    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white group"
+    aria-label="Défiler vers le bas"
+  >
+    <div class="p-3 border border-gold-400 rounded-full group-hover:bg-gold-400/20 transition-all duration-300">
+      <i class="fas fa-chevron-down text-gold-400"></i>
+    </div>
+  </a>
+  
+  <!-- Badge de qualité -->
+  <div class="absolute top-10 right-10 z-30 hidden md:block">
+    <div class="bg-gold-500 text-primary-900 rounded-full w-24 h-24 flex items-center justify-center p-2 shadow-luxury-lg">
+      <div class="text-center">
+        <span class="block text-xs font-medium">CUISINE</span>
+        <span class="block text-lg font-bold">PREMIUM</span>
+        <span class="block text-xs">DEPUIS 2015</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,253 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout 
+  title="À Propos | Restaurant Haïtien" 
+  description="Découvrez l'histoire et les valeurs de notre restaurant haïtien authentique, notre équipe passionnée et notre engagement pour la cuisine haïtienne."
+>
+  <!-- En-tête de la page À propos -->
+  <section class="bg-primary-50 py-16">
+    <div class="container-custom text-center">
+      <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Notre Histoire</h1>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Découvrez comment Saveurs d'Haïti est devenu un lieu incontournable pour les amateurs de cuisine haïtienne authentique.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Histoire du restaurant -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <img 
+            src="/images/restaurant-story.jpg" 
+            alt="Notre restaurant à ses débuts" 
+            class="rounded-lg shadow-xl w-full h-auto"
+          />
+        </div>
+        <div>
+          <h2 class="text-3xl font-serif font-bold mb-6">Nos Débuts</h2>
+          <p class="mb-4 text-gray-700">
+            Fondé en 2015 par la chef Marie-Claire Bélizaire, Saveurs d'Haïti est né d'une passion profonde pour la cuisine traditionnelle haïtienne et d'un désir de la partager avec le monde.
+          </p>
+          <p class="mb-4 text-gray-700">
+            Originaire de Port-au-Prince, Marie-Claire a grandi entourée des arômes exquis de la cuisine de sa grand-mère, qui lui a transmis non seulement des recettes ancestrales mais aussi l'amour des produits frais et des préparations authentiques.
+          </p>
+          <p class="mb-4 text-gray-700">
+            Après une formation culinaire en France et plusieurs années d'expérience dans des restaurants renommés, elle a décidé de revenir à ses racines et d'ouvrir un lieu où la cuisine haïtienne serait mise à l'honneur avec élégance et respect des traditions.
+          </p>
+          <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-600 my-6">
+            "La cuisine haïtienne est un trésor qui mérite d'être célébré. C'est mon héritage, mon âme, et je suis fière de la partager avec vous."
+            <footer class="text-right font-medium mt-2">— Marie-Claire Bélizaire, Fondatrice</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Notre philosophie -->
+  <section class="py-16 bg-gray-50">
+    <div class="container-custom">
+      <h2 class="section-title">Notre Philosophie</h2>
+      <p class="section-subtitle">Les valeurs qui nous guident au quotidien dans notre passion pour la cuisine haïtienne.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="bg-white p-8 rounded-lg shadow-md text-center">
+          <div class="text-primary-600 text-4xl mb-4">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Authenticité</h3>
+          <p class="text-gray-600">
+            Nous préservons les techniques et recettes traditionnelles tout en apportant une touche de modernité dans la présentation.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md text-center">
+          <div class="text-primary-600 text-4xl mb-4">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Qualité</h3>
+          <p class="text-gray-600">
+            Nous sélectionnons avec soin des ingrédients frais et de saison pour vous offrir une expérience gustative exceptionnelle.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md text-center">
+          <div class="text-primary-600 text-4xl mb-4">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Convivialité</h3>
+          <p class="text-gray-600">
+            Nous créons un environnement chaleureux où chacun se sent bienvenu, comme à la maison, pour partager un moment privilégié.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Notre équipe -->
+  <section class="py-16">
+    <div class="container-custom">
+      <h2 class="section-title">Notre Équipe</h2>
+      <p class="section-subtitle">Rencontrez les talents passionnés qui font de chaque visite une expérience mémorable.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <div class="text-center">
+          <div class="relative mb-4 inline-block">
+            <img 
+              src="/images/chef-1.jpg" 
+              alt="Marie-Claire Bélizaire" 
+              class="w-48 h-48 object-cover rounded-full mx-auto"
+            />
+            <div class="absolute bottom-0 right-0 bg-primary-600 text-white p-2 rounded-full">
+              <i class="fas fa-utensils"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-1">Marie-Claire Bélizaire</h3>
+          <p class="text-gray-600 mb-3">Chef Fondatrice</p>
+          <p class="text-sm text-gray-500">
+            Passionnée par les saveurs authentiques d'Haïti et formée dans les meilleures écoles culinaires françaises.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="relative mb-4 inline-block">
+            <img 
+              src="/images/chef-2.jpg" 
+              alt="Jean-Philippe Moïse" 
+              class="w-48 h-48 object-cover rounded-full mx-auto"
+            />
+            <div class="absolute bottom-0 right-0 bg-primary-600 text-white p-2 rounded-full">
+              <i class="fas fa-utensils"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-1">Jean-Philippe Moïse</h3>
+          <p class="text-gray-600 mb-3">Chef Exécutif</p>
+          <p class="text-sm text-gray-500">
+            Expert en cuisine haïtienne moderne avec plus de 15 ans d'expérience dans des restaurants renommés.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="relative mb-4 inline-block">
+            <img 
+              src="/images/sommelier.jpg" 
+              alt="Sophie Laurent" 
+              class="w-48 h-48 object-cover rounded-full mx-auto"
+            />
+            <div class="absolute bottom-0 right-0 bg-primary-600 text-white p-2 rounded-full">
+              <i class="fas fa-wine-glass-alt"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-1">Sophie Laurent</h3>
+          <p class="text-gray-600 mb-3">Responsable des Boissons</p>
+          <p class="text-sm text-gray-500">
+            Créatrice de notre sélection de cocktails tropicaux et experte en rhums haïtiens premium.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="relative mb-4 inline-block">
+            <img 
+              src="/images/manager.jpg" 
+              alt="Michel Beauvoir" 
+              class="w-48 h-48 object-cover rounded-full mx-auto"
+            />
+            <div class="absolute bottom-0 right-0 bg-primary-600 text-white p-2 rounded-full">
+              <i class="fas fa-concierge-bell"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-1">Michel Beauvoir</h3>
+          <p class="text-gray-600 mb-3">Directeur de Salle</p>
+          <p class="text-sm text-gray-500">
+            Garant de l'excellence du service et de l'accueil chaleureux qui fait notre réputation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Engagements -->
+  <section class="py-16 bg-primary-50">
+    <div class="container-custom">
+      <h2 class="section-title">Nos Engagements</h2>
+      <p class="section-subtitle">Découvrez les actions que nous menons pour promouvoir une cuisine responsable et soutenir la communauté haïtienne.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-seedling text-primary-600 mr-3"></i>
+            Approvisionnement responsable
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Nous privilégions les produits locaux et de saison, en collaborant avec des producteurs engagés dans des pratiques durables. Nos épices proviennent directement de petits producteurs haïtiens.
+          </p>
+          <a href="#" class="text-primary-600 font-medium hover:underline">En savoir plus</a>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-hands-helping text-primary-600 mr-3"></i>
+            Soutien à la communauté
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Nous soutenons des projets éducatifs en Haïti et participons à la formation de jeunes chefs talentueux. 5% de nos bénéfices sont reversés à des associations locales.
+          </p>
+          <a href="#" class="text-primary-600 font-medium hover:underline">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Témoignages -->
+  <section class="py-16">
+    <div class="container-custom text-center">
+      <h2 class="section-title">Ce qu'on dit de nous</h2>
+      <div class="flex flex-wrap justify-center gap-4 mt-8">
+        <div class="bg-white p-4 rounded-lg shadow-md max-w-xs">
+          <img src="/images/media-1.png" alt="Le Gourmet Magazine" class="h-16 mx-auto mb-4"/>
+          <p class="italic text-gray-600 mb-4">
+            "Une adresse incontournable pour les amateurs de cuisine caribéenne authentique. Un voyage gustatif exceptionnel."
+          </p>
+          <p class="font-medium">Le Gourmet Magazine, 2023</p>
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg shadow-md max-w-xs">
+          <img src="/images/media-2.png" alt="Guide Culinaire" class="h-16 mx-auto mb-4"/>
+          <p class="italic text-gray-600 mb-4">
+            "Saveurs d'Haïti réussit le pari d'offrir une cuisine traditionnelle de haute qualité dans un cadre élégant et chaleureux."
+          </p>
+          <p class="font-medium">Guide Culinaire, 2024</p>
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg shadow-md max-w-xs">
+          <img src="/images/media-3.png" alt="Food & Travel" class="h-16 mx-auto mb-4"/>
+          <p class="italic text-gray-600 mb-4">
+            "L'une des meilleures tables de cuisine haïtienne en ville. Une explosion de saveurs qui vous transportera directement aux Caraïbes."
+          </p>
+          <p class="font-medium">Food & Travel, 2023</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="py-16 bg-primary-700 text-white text-center">
+    <div class="container-custom">
+      <h2 class="text-3xl font-serif font-bold mb-4">Prêt à découvrir notre cuisine ?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Réservez votre table dès aujourd'hui et venez partager notre passion pour la cuisine haïtienne.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="/menu" class="btn-secondary">
+          Découvrir le menu
+        </a>
+        <a href="/contact#reservation" class="btn-outline border-white text-white hover:bg-white hover:bg-opacity-20">
+          Réserver une table
+        </a>
+      </div>
+    </div>
+  </section>
+</MainLayout>

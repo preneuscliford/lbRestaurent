@@ -1,0 +1,61 @@
+---
+const teamMembers = [
+  {
+    name: "Jean-Pierre Moreau",
+    role: "Chef Principal",
+    image: "/images/chef-1.jpg",
+    bio: "Avec plus de 15 ans d'expérience dans la cuisine haïtienne, Jean-Pierre apporte authenticité et innovation à chaque plat qu'il crée."
+  },
+  {
+    name: "Marie Beauvais",
+    role: "Chef Pâtissière",
+    image: "/images/chef-2.jpg",
+    bio: "Spécialiste des desserts traditionnels haïtiens revisités avec une touche moderne, Marie crée des douceurs inoubliables."
+  },
+  {
+    name: "Robert Saint-Louis",
+    role: "Chef de Cuisine",
+    image: "/images/chef-3.jpg",
+    bio: "Passionné par les saveurs authentiques d'Haïti, Robert veille à ce que chaque plat respecte les traditions tout en surprenant vos papilles."
+  }
+];
+---
+
+<section id="team" class="section bg-primary-50">
+  <div class="container-custom">
+    <h2 class="section-title">Notre Équipe</h2>
+    <p class="section-subtitle">Rencontrez les talents passionnés qui donnent vie à notre cuisine haïtienne.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      {teamMembers.map((member) => (
+        <div class="bg-white rounded-xl overflow-hidden shadow-md transition-transform duration-300 hover:shadow-lg hover:-translate-y-2">
+          <div class="h-64 overflow-hidden">
+            <img 
+              src={member.image} 
+              alt={member.name} 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-900">{member.name}</h3>
+            <p class="text-secondary-600 font-medium mb-3">{member.role}</p>
+            <p class="text-gray-700">{member.bio}</p>
+            
+            <div class="mt-4 flex space-x-3">
+              <a href="#" class="text-primary-600 hover:text-primary-800">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-primary-600 hover:text-primary-800">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-primary-600 hover:text-primary-800">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

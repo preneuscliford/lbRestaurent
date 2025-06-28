@@ -1,0 +1,68 @@
+---
+const galleryImages = [
+  {
+    src: "/images/gallery-1.jpg",
+    alt: "Intérieur du restaurant",
+    category: "Ambiance"
+  },
+  {
+    src: "/images/gallery-2.jpg",
+    alt: "Plat signature",
+    category: "Cuisine"
+  },
+  {
+    src: "/images/gallery-3.jpg",
+    alt: "Préparation du chef",
+    category: "Cuisine"
+  },
+  {
+    src: "/images/gallery-4.jpg",
+    alt: "Événement spécial",
+    category: "Événements"
+  },
+  {
+    src: "/images/gallery-5.jpg",
+    alt: "Bar du restaurant",
+    category: "Ambiance"
+  },
+  {
+    src: "/images/gallery-6.jpg",
+    alt: "Dessert traditionnel",
+    category: "Cuisine"
+  }
+];
+
+// Ces images sont disponibles via le script de téléchargement dans public/images/download_images.js
+// Exécutez: node public/images/download_images.js pour télécharger toutes les images
+---
+
+<section id="gallery" class="section">
+  <div class="container-custom">
+    <h2 class="section-title">Notre Galerie</h2>
+    <p class="section-subtitle">Un aperçu visuel de notre restaurant, notre cuisine et notre ambiance.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
+      {galleryImages.map((image) => (
+        <div class="relative group overflow-hidden rounded-lg">
+          <img 
+            src={image.src} 
+            alt={image.alt} 
+            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+            <span class="text-white text-sm font-medium bg-primary-600 px-3 py-1 rounded-full self-start mb-2">
+              {image.category}
+            </span>
+            <h3 class="text-white font-medium">{image.alt}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="#" class="btn-outline">
+        Voir toute la galerie <i class="fas fa-images ml-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
